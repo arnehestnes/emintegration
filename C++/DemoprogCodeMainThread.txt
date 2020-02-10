@@ -1,0 +1,17 @@
+﻿
+To integrate the Kongsberg Maritime datagram assembly code with a customer prepared application 
+(as exemplified in the supplied CombineEMDatagrams program) two specific functional elements needs 
+to be employed:
+
+1. 
+A KM provided asynchronous consumer mechanism must be added to the customer application. 
+This will allow the customer application to receive and handle the fully assembled 
+datagrams without affecting the reception and assembly of subsequent fragmented datagrams.   
+
+2.
+The customer application must use a KM provided asynchronous datagram queuing mechanism.
+This will allow the customer application to dispatch all incoming datagram fragments 
+to the assembly process without any significant delay thus decoupling the datagram receive and 
+the assembly  activities.  
+
+The implementation of both mechanisms are included in the C++ source files and presented in the video.
